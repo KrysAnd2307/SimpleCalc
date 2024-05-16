@@ -56,6 +56,12 @@ int main() {
                 }
             }
             case 4: {
+                printf("a = \n");
+                scanf("%f", &a);
+                printf("b= \n");
+                scanf("%f", &b);
+                float result = Mul(a, b);
+                printf("%f * %f = % f\n", a, b, result);
                 break;
             }
             default: {
