@@ -37,11 +37,23 @@ int main() {
                 printf("b= \n");
                 scanf("%f", &b);
                 float result = Sub(a, b);
-                printf("%f + %f = % f\n",a,b,result);
+                printf("%f - %f = % f\n",a,b,result);
                 break;
             }
             case 3: {
-                break;
+                printf("a = \n");
+                scanf("%f", &a);
+                printf("b= \n");
+                scanf("%f", &b);
+                if(b != 0) {
+                    float result = Div(a, b);
+                    printf("%f / %f = % f\n", a, b, result);
+                    break;
+                }
+                else{
+                    printf("Division by 0!!!\n");
+                    break;
+                }
             }
             case 4: {
                 break;
