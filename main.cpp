@@ -12,24 +12,38 @@ void menu(){
 
 int main() {
     int choice = 0;
+    float a = 0;
+    float b = 0;
     do {
         menu();
         scanf("%d", &choice);
         switch (choice) {
-            case 0:
+            case 0: {
                 printf("Program ended\n");
                 break;
-            case 1:
+            }
+            case 1: {
+                printf("a = \n");
+                scanf("%f", &a);
+                printf("b= \n");
+                scanf("%f", &b);
+                float result = Add(a, b);
+                printf("%f + %f = % f\n",a,b,result);
                 break;
-            case 2:
+            }
+            case 2: {
                 break;
-            case 3:
+            }
+            case 3: {
                 break;
-            case 4:
+            }
+            case 4: {
                 break;
-            default:
+            }
+            default: {
                 printf("Select the correct program!!!\n");
                 break;
+            }
         }
     }while(choice != 0);
 
