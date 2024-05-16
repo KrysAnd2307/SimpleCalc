@@ -32,6 +32,12 @@ int main() {
                 break;
             }
             case 2: {
+                printf("a = \n");
+                scanf("%f", &a);
+                printf("b= \n");
+                scanf("%f", &b);
+                float result = Sub(a, b);
+                printf("%f + %f = % f\n",a,b,result);
                 break;
             }
             case 3: {
