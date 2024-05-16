@@ -1,12 +1,12 @@
-#include <stdio.h>
+#include <iostream>
 #include "calc.h"
-
+using namespace std;
 void menu(){
-    printf("0 - End the program\n");
-    printf("1 - Addition\n");
-    printf("2 - Subtraction\n");
-    printf("3 - Division\n");
-    printf("4 - Multiplication\n");
+    cout << "0 - End the program" << endl;
+    cout << "1 - Addition" << endl;
+    cout << "2 - Subtraction" << endl;
+    cout << "3 - Division" << endl;
+    cout << "4 - Multiplication" << endl;
 }
 
 
@@ -16,50 +16,56 @@ int main() {
     float b = 0;
     do {
         menu();
-        scanf("%d", &choice);
+        cin >> choice;
         switch (choice) {
             case 0: {
-                printf("Program ended\n");
+                cout << "Program ended" << endl;
                 break;
             }
             case 1: {
-                printf("a = \n");
-                scanf("%f", &a);
-                printf("b= \n");
-                scanf("%f", &b);
+                cout << "a = " << endl;
+                cin >> a;
+                cout << "b= " << endl;
+                cin >> b;
                 float result = Add(a, b);
-                printf("%f + %f = % f\n",a,b,result);
+                cout << a << "+" << b << "=" << result << endl;
                 break;
             }
             case 2: {
-                printf("a = \n");
-                scanf("%f", &a);
-                printf("b= \n");
-                scanf("%f", &b);
+                cout << "a = " << endl;
+                cin >> a;
+                cout << "b= " << endl;
+                cin >> b;
                 float result = Sub(a, b);
-                printf("%f - %f = % f\n",a,b,result);
+                cout << a << "-" << b << "=" << result << endl;
                 break;
             }
             case 3: {
-                printf("a = \n");
-                scanf("%f", &a);
-                printf("b= \n");
-                scanf("%f", &b);
+                cout << "a = " << endl;
+                cin >> a;
+                cout << "b= " << endl;
+                cin >> b;
                 if(b != 0) {
                     float result = Div(a, b);
-                    printf("%f / %f = % f\n", a, b, result);
+                    cout << a << "/" << b << "=" << result << endl;
                     break;
                 }
                 else{
-                    printf("Division by 0!!!\n");
+                    cout << "Division by 0!!!" << endl;
                     break;
                 }
             }
             case 4: {
+                cout << "a = " << endl;
+                cin >> a;
+                cout << "b= " << endl;
+                cin >> b;
+                float result = Mul(a, b);
+                cout << a << "*" << b << "=" << result << endl;
                 break;
             }
             default: {
-                printf("Select the correct program!!!\n");
+                cout << "Select the correct program!!!" << endl;
                 break;
             }
         }
